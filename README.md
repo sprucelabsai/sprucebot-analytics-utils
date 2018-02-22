@@ -13,9 +13,7 @@ const object = {
 analyticsUtils.fire('user', 'exit', object);
 `
 
-
 ### Testing
 To start the test, in a terminal type: `npm run test`. The test suite is ran by Jest. Code coverage results can be found in `cover/lcov-report`.
-
 
 ### Documentation
