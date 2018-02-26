@@ -1,0 +1,37 @@
+{
+  "name": "sprucebot-analytics-utils",
+  "version": "1.0.0",
+  "description": "Sprucebot analytics module for tracking events.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "precommit": "lint-staged",
+    "test": "jest src --runInBand --noStackTrace --forceExit --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sprucelabsai/sprucebot-analytics-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sprucelabsai/sprucebot-analytics-utils/issues"
+  },
+  "homepage": "https://github.com/sprucelabsai/sprucebot-analytics-utils#readme",
+  "dependencies": {
+    "dotenv": "^5.0.0",
+    "jwt-simple": "^0.5.1",
+    "superagent": "^3.8.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.17.0",
+    "eslint-plugin-react-app": "^1.0.2",
+    "jest": "^22.4.0",
+    "lint-staged": "^6.1.0",
+    "prettier": "^1.10.2"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --write --print-width 100 --single-quote --trailing-comma es5",
+      "git add"
+    ]
+  }
+}
