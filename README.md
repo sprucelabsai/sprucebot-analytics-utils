@@ -4,7 +4,7 @@
 Before using, make sure the ANALYTICS_API_HOST and JWT_SECRET variables are set.
 
 ```
-ANALYTICS_API_HOST=https://sb-analytics-api-dev.herokuapp.com/api/v1/events
+ANALYTICS_API_HOST=https://sb-analytics-api-dev.herokuapp.com
 JWT_SECRET=abcdefghijklmnopqrstuvwxyz
 ```
 
