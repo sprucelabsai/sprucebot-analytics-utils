@@ -7,7 +7,7 @@ function callApi(token, noun, verb, object) {
 
   return new Promise((resolve, reject) => {
     request
-    .post(API_URL)
+    .post(`${API_URL}/api/v1/events`)
     .set({ 'authorization': `Bearer ${token}` })
     .set('Content-Type', 'application/json')
     .send({ noun, verb, object })
