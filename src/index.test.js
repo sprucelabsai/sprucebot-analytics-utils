@@ -2,23 +2,34 @@ require('dotenv').config();
 const env = Object.assign({}, process.env);
 const sbAnalyticsUtils = require('./index');
 
-beforeEach(async () => {
-  jest.clearAllMocks();
-});
-
-afterEach(async () => {
-  process.env = env;
-});
-
 /**
  * Test when JWT_SECRET is not set
  */
 test('env JWT_SECRET is required', async () => {
+  const JWT_SECRET = process.env.JWT_SECRET;
+
   // Delete the JWT_SECRET
   delete process.env.JWT_SECRET;
 
   const res = await sbAnalyticsUtils.fire('person', 'leave');
-  expect(res).toContain('Require key');
+  expect(res).toContain('Missing JWT_SECRET');
+
+  process.env.JWT_SECRET = JWT_SECRET;
+});
+
+/**
+ * Test when ANALYTICS_API_HOST is not set
+ */
+test('env ANALYTICS_API_HOST is required', async () => {
+  const ANALYTICS_API_HOST = process.env.ANALYTICS_API_HOST;
+
+  // Delete the ANALYTICS_API_HOST
+  delete process.env.ANALYTICS_API_HOST;
+
+  const res = await sbAnalyticsUtils.fire('person', 'leave');
+  expect(res).toContain('Missing ANALYTICS_API_HOST');
+
+  process.env.ANALYTICS_API_HOST = ANALYTICS_API_HOST;
 });
 
 /**
