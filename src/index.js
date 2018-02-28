@@ -36,27 +36,27 @@ module.exports = {
   async fire(noun, verb, object) {
     try {
       const API_URL = process.env.ANALYTICS_API_HOST;
-      const JWT_SECRET = process.env.JWT_SECRET;
+      const JWT_ANALYTICS_SECRET = process.env.JWT_ANALYTICS_SECRET;
 
       if (!API_URL) {
         throw new Error('Missing ANALYTICS_API_HOST');
       }
 
-      if (!JWT_SECRET) {
-        throw new Error('Missing JWT_SECRET');
+      if (!JWT_ANALYTICS_SECRET) {
+        throw new Error('Missing JWT_ANALYTICS_SECRET');
       }
 
-      if (!noun) {
+      if (!noun || typeof noun !== 'string') {
         throw new Error('Missing noun');
       }
 
-      if (!verb) {
+      if (!verb || typeof verb !== 'string') {
         throw new Error('Missing verb');
       }
 
       // Generate the JWT Token
-      const token = jwt.encode({}, JWT_SECRET); // We should probably encode some data inside the token
-      const url = `${API_URL}/api/v1/events`
+      const token = jwt.encode({}, JWT_ANALYTICS_SECRET); // We should probably encode some data inside the token
+      const url = `${API_URL}/api/v1/events`;
 
       return await callApi(url, token, noun, verb, object);
     } catch (err) {
