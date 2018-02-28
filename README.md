@@ -1,11 +1,11 @@
 # Sprucebot Analytics Utils
 
 ### Getting Started
-Before using, make sure the ANALYTICS_API_HOST and JWT_SECRET variables are set.
+Before using, make sure the ANALYTICS_API_HOST and JWT_ANALYTICS_SECRET variables are set.
 
 ```
 ANALYTICS_API_HOST=https://sb-analytics-api-dev.herokuapp.com
-JWT_SECRET=abcdefghijklmnopqrstuvwxyz
+JWT_ANALYTICS_SECRET=abcdefghijklmnopqrstuvwxyz
 ```
 
 After installing, require the module with the following `const analyticsUtils = require('sprucebot-analytics-utils');`. To fire an event, at the minimum, you will need a noun and verb `analyticsUtils.fire('user', 'exit')`. An optional object param can be passed in as well. 
