@@ -3,11 +3,11 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/sprucelabsai/sprucebot-analytics-utils.svg?token=7509c67112ac9616b7af40938b9814d21c5263d65f71fa51758953d89d851b61&ts=1519614091537)](https://greenkeeper.io/)
 
 ### Getting Started
-Before using, make sure the ANALYTICS_API_HOST and JWT_SECRET variables are set.
+Before using, make sure the ANALYTICS_API_HOST and JWT_ANALYTICS_SECRET variables are set.
 
 ```
-ANALYTICS_API_HOST=https://sb-analytics-api-dev.herokuapp.com/api/v1/events
-JWT_SECRET=abcdefghijklmnopqrstuvwxyz
+ANALYTICS_API_HOST=https://sb-analytics-api-dev.herokuapp.com
+JWT_ANALYTICS_SECRET=abcdefghijklmnopqrstuvwxyz
 ```
 
 After installing, require the module with the following `const analyticsUtils = require('sprucebot-analytics-utils');`. To fire an event, at the minimum, you will need a noun and verb `analyticsUtils.fire('user', 'exit')`. An optional object param can be passed in as well. 
