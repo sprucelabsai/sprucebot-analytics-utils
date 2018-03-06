@@ -1,6 +1,6 @@
 # Sprucebot Analytics Utils
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/sprucelabsai/sprucebot-analytics-utils.svg?token=7509c67112ac9616b7af40938b9814d21c5263d65f71fa51758953d89d851b61&ts=1519614091537)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/sprucelabsai/sprucebot-analytics-utils.svg?token=7509c67112ac9616b7af40938b9814d21c5263d65f71fa51758953d89d851b61&ts=1520297538216)](https://greenkeeper.io/)
 
 ### Getting Started
 Before using, make sure the ANALYTICS_API_HOST and JWT_ANALYTICS_SECRET variables are set.
