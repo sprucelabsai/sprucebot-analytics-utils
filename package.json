@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/sprucelabsai/sprucebot-analytics-utils#readme",
   "dependencies": {
-    "dotenv": "^5.0.0",
+    "dotenv": "^6.0.0",
     "jwt-simple": "^0.5.1",
     "superagent": "^3.8.2"
   },
